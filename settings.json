@@ -1,0 +1,46 @@
+{
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "humanizer@humanizer": true,
+    "impeccable@impeccable": true,
+    "taste-skill@taste-skill": true,
+    "playwright@claude-plugins-official": true,
+    "api-platform@api-platform-skillset": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-security@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    },
+    "taste-skill": {
+      "source": {
+        "source": "github",
+        "repo": "Leonxlnx/taste-skill"
+      }
+    },
+    "api-platform-skillset": {
+      "source": {
+        "source": "github",
+        "repo": "api-platform/skillset"
+      }
+    }
+  },
+  "tui": "fullscreen"
+}

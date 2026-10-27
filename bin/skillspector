@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Runs NVIDIA SkillSpector through Docker to scan this repo's skills, e.g.:
+#   bin/skillspector scan skills/ --no-llm
+# ponytail: only $PWD and /tmp are mounted; absolute paths elsewhere won't resolve
+set -euo pipefail
+docker image inspect skillspector >/dev/null 2>&1 ||
+  docker build -t skillspector https://github.com/NVIDIA/skillspector.git >&2
+exec docker run --rm --user "$(id -u):$(id -g)" \
+  -v "$PWD:$PWD" -v /tmp:/tmp -w "$PWD" \
+  skillspector "$@"
