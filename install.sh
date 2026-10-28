@@ -14,6 +14,12 @@ fi
 ln -sf "$PWD/settings.json" ~/.claude/settings.json
 
 # Link each skill individually so other entries in ~/.claude/skills survive
+# Real dirs can't be replaced by ln, so move them out of skills/ (a copy left there would load twice)
 for skill in skills/*/; do
-  [ -d "$skill" ] && ln -sfn "$PWD/${skill%/}" ~/.claude/skills/
+  target=~/.claude/skills/$(basename "$skill")
+  if [ -d "$target" ] && [ ! -L "$target" ]; then
+    mkdir -p ~/.claude/skills.bak
+    mv "$target" ~/.claude/skills.bak/
+  fi
+  ln -sfn "$PWD/${skill%/}" ~/.claude/skills/
 done
