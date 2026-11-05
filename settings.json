@@ -8,7 +8,8 @@
     "playwright@claude-plugins-official": true,
     "api-platform@api-platform-skillset": true,
     "claude-code-setup@claude-plugins-official": true,
-    "claude-security@claude-plugins-official": true
+    "claude-security@claude-plugins-official": true,
+    "we-enable@we-enable": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -40,7 +41,18 @@
         "source": "github",
         "repo": "api-platform/skillset"
       }
+    },
+    "we-enable": {
+      "source": {
+        "source": "git",
+        "url": "git@bitbucket.org:MediatastischSoftware/guidelines.git"
+      }
     }
   },
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  }
 }
