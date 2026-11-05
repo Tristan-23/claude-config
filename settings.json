@@ -9,7 +9,8 @@
     "api-platform@api-platform-skillset": true,
     "claude-code-setup@claude-plugins-official": true,
     "claude-security@claude-plugins-official": true,
-    "we-enable@we-enable": true
+    "we-enable@we-enable": true,
+    "mattpocock-skills@mattpocock": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -46,6 +47,12 @@
       "source": {
         "source": "git",
         "url": "git@bitbucket.org:MediatastischSoftware/guidelines.git"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
       }
     }
   },
