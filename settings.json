@@ -71,6 +71,7 @@
     }
   },
   "tui": "fullscreen",
+  "idleCompaction": false,
   "attribution": {
     "commit": "",
     "pr": "",
